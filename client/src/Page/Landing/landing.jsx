@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import Logo from "../../assets/image/Logo.png";
-// eslint-disable-next-line no-unused-vars
 import Mentor1 from "../../assets/image/Mentor image-1.png";
+import deco from "../../assets/image/deco.svg";
 const Landing = () => {
     return (
         <>
@@ -40,6 +41,21 @@ const Landing = () => {
                 </div>
             </nav>
             {/* Nav end  */}
+            <head className="flex flex-col justify-center items-center mt-14">
+                <img src={deco} alt="" />
+                <h1 className="text-6xl font-bold text-text leading-[110px] text-center max-w-[1188px]">
+                    The <span className="text-secondary">future</span> belongs to those who keep <span className="text-primary">learning</span>{" "}
+                </h1>
+                <p className="text-text font-medium text-base mt-8 max-w-[524px] text-center opacity-80">
+                    Every skill you gain brings new opportunities and pushes you closer to your goals. Start today with Koursian
+                </p>
+                <a href="" className="py-3 pl-8 pr-3 bg-primary text-white font-semibold mt-8 rounded-3xl flex justify-center items-center gap-4">
+                    Get Started
+                    <div className="flex justify-center items-center bg-white rounded-full p-1">
+                        <span className="solar-arrow-landing text-primary font-bold"></span>
+                    </div>
+                </a>
+            </head>
         </>
     );
 };
