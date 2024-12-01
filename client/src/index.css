@@ -1,11 +1,18 @@
-@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+@import url("https://fonts.cdnfonts.com/css/open-sauce-one");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-  .my-button-primary{
-    @apply 
-  }
+@layer components {
+    .my-button-primary {
+        @apply;
+    }
+    .nav-link {
+        @apply py-2 px-6 rounded-3xl flex justify-center items-center text-text font-normal border border-text opacity-70 hover:opacity-100 hover:bg-primary hover:text-white duration-200
+    }
+}
+
+body{
+    font-family: "open sauce one";
 }
