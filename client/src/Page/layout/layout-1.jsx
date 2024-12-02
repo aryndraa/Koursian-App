@@ -16,3 +16,5 @@ return (
 )
     
 }
+
+export default layout1
