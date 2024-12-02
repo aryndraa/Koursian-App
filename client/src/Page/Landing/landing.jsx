@@ -7,6 +7,7 @@ import Mentor4 from "../../assets/image/Mentor image-4.png";
 import Mentor5 from "../../assets/image/Mentor image.png";
 import Deco from "../../assets/image/deco.svg";
 import Navbar from "../../components/landing/navbar.jsx";
+
 const Landing = () => {
     return (
         <>
@@ -61,6 +62,34 @@ const Landing = () => {
                     <div className="text-center">
                         <h2 className="text-5xl font-bold text-white">700+</h2>
                         <p className="text-base font-bold text-white opacity-40">Courses</p>
+                    </div>
+                </div>
+            </section>
+            <section className="container mx-auto mt-[200px] mb-[100px]">
+                <div className="flex items-center justify-between">
+                    <div>
+                        <img src={Deco} alt="" />
+                        <p className="leading-tight max-w-[802px] landing-section-title">
+                            Explore the Bootcamp Everyone <span className="text-primary">Talking</span> About
+                        </p>
+                    </div>
+                    <div className="max-w-[600px]">
+                        <p className="text-base font-medium text-text leading-[24px]">
+                            Discover the programs that have helped thousands of learners achieve their goals and transform their careers. These popular courses are designed to teach you the most
+                            in-demand skills, with expert guidance and real-world projects that prepare you for success. Join a community of ambitious learners and take the first step toward a
+                            brighter future today.
+                        </p>
+                        <a href="" className="flex items-center justify-center gap-4 py-3 pl-8 pr-3 mt-8 font-semibold bg-transparent border text-primary border-primary rounded-3xl w-fit">
+                            Get Started
+                            <div className="flex items-center justify-center p-1 rounded-full bg-primary">
+                                <span className="font-bold text-white solar-arrow-landing"></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div className="grid grid-cols-4 mt-16">
+                    <div className="landing-bootcamp-card">
+                        
                     </div>
                 </div>
             </section>
