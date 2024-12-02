@@ -44,23 +44,23 @@ const Landing = () => {
                     </div>
                     <div className="devider-vertical"></div>
                     <div className="text-center">
-                        <h2 className="text-5xl font-bold text-white">10+</h2>
-                        <p className="text-base font-bold text-white opacity-40">Years of Service</p>
+                        <h2 className="text-5xl font-bold text-white">200M+</h2>
+                        <p className="text-base font-bold text-white opacity-40">Students</p>
                     </div>
                     <div className="devider-vertical"></div>
                     <div className="text-center">
-                        <h2 className="text-5xl font-bold text-white">10+</h2>
-                        <p className="text-base font-bold text-white opacity-40">Years of Service</p>
+                        <h2 className="text-5xl font-bold text-white">40</h2>
+                        <p className="text-base font-bold text-white opacity-40">Official Partners</p>
                     </div>
                     <div className="devider-vertical"></div>
                     <div className="text-center">
-                        <h2 className="text-5xl font-bold text-white">10+</h2>
-                        <p className="text-base font-bold text-white opacity-40">Years of Service</p>
+                        <h2 className="text-5xl font-bold text-white">500</h2>
+                        <p className="text-base font-bold text-white opacity-40">Mentors</p>
                     </div>
                     <div className="devider-vertical"></div>
                     <div className="text-center">
-                        <h2 className="text-5xl font-bold text-white">10+</h2>
-                        <p className="text-base font-bold text-white opacity-40">Years of Service</p>
+                        <h2 className="text-5xl font-bold text-white">700+</h2>
+                        <p className="text-base font-bold text-white opacity-40">Courses</p>
                     </div>
                 </div>
             </section>
