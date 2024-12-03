@@ -2,7 +2,8 @@ import Logo from "../assets/image/Logo.png";
 
 const SideBar = () => {
   return (
-    <div className="lg:drawer-open">
+    // drawer 
+    <div className="lg:drawer-open h-min">
       <input id="sidebar-toggle" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col w-min">
         <label
@@ -16,7 +17,7 @@ const SideBar = () => {
       {/* Sidebar */}
       <div className="drawer-side">
         <label htmlFor="sidebar-toggle" className="drawer-overlay"></label>
-        <ul className="menu p-4 bg-base-100 text-base-content h-screen relative">
+        <ul className="menu p-4 bg-base-100 text-base-content relative">
           <div className="flex items-center justify-between pt-3 pb-7">
             <div className="flex items-center">
               <img src={Logo} alt="Logo Koursian" />

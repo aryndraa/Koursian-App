@@ -2,35 +2,26 @@ import Profile from "../assets/image/profile.png";
 
 const NavLog = () => {
   return (
-    <div className="navbar bg-base-100 pt-7">
-      <div className="flex-1">
+    <div className="navbar bg-base-100 justify-between">
+      <div className="">
         <p className="font-Open-sauce font-semibold text-3lg text-black pl-4">
           Dashboard
         </p>
       </div>
 
-      <div className="flex-1">
-        <label className="input input-bordered flex items-center gap-2">
-          <input type="text" className="grow" placeholder="Search" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            className="h-4 w-4 opacity-70"
-          >
-            <path
-              fillRule="evenodd"
-              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </label>
+      <div className="">
+        <input
+        placeholder="search bootcamp, mentor, question"
+        className="search-bar
+        ">
+        
+        </input>
       </div>
 
       {/* Bagian Kanan - Menu */}
-      <div className="flex-none">
+      <div className="">
         <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className=" btn-nav   lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -66,13 +57,13 @@ const NavLog = () => {
 
         {/* Menu untuk Desktop */}
         <div className="hidden lg:flex items-center space-x-4">
-          <button className="btn btn-ghost">
+          <button className="  btn-nav  ">
             <span className="solar--bookmark-bold-duotone"></span>
           </button>
-          <button className="btn btn-ghost">
+          <button className=" btn-nav  ">
             <span className="solar--bell-bold-duotone"></span>
           </button>
-          <button className="btn btn-ghost">
+          <button className=" btn-nav  ">
             <span className="solar--cart-large-2-bold-duotone"></span>
           </button>
           <div className="avatar">
