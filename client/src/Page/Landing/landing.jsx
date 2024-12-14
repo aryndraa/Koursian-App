@@ -1,13 +1,17 @@
-/* eslint-disable no-unused-vars */
-
-import Mentor1 from "../../assets/image/Mentor image-1.png";
-import Mentor2 from "../../assets/image/Mentor image-2.png";
-import Mentor3 from "../../assets/image/Mentor image-3.png";
-import Mentor4 from "../../assets/image/Mentor image-4.png";
-import Mentor5 from "../../assets/image/Mentor image.png";
-import Deco from "../../assets/image/deco.svg";
+import Mentor1 from "../../assets/image/landing/Mentor image-1.png";
+import Mentor2 from "../../assets/image/landing/Mentor image-2.png";
+import Mentor3 from "../../assets/image/landing/Mentor image-3.png";
+import Mentor4 from "../../assets/image/landing/Mentor image-4.png";
+import Mentor5 from "../../assets/image/landing/Mentor image.png";
+import Deco from "../../assets/image/landing/deco.svg";
+import DecoPrimary from "../../assets/image/landing/decoprim.svg";
 import Navbar from "../../components/landing/navbar.jsx";
-import backendIcon from "../../assets/image/beico.svg";
+import FeatureImage from "../../assets/image/Landing/FeatureImg.png";
+import { Scrollbar } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/scrollbar";
 
 const Landing = () => {
     return (
@@ -188,6 +192,59 @@ const Landing = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section className="py-[100px] container mx-auto">
+                <div className="flex flex-col xl:flex-row xl:items-center gap-y-8">
+                    <img src={FeatureImage} alt="" className="h-fit w-fit" />
+                    <div className="flex-1">
+                        <img src={DecoPrimary} alt="" className="hidden xl:block" />
+                        <p className="landing-section-title max-w-[802px]">
+                            Experience the <span className="text-secondary">Benefits</span> of <span className="text-secondary">Flexible</span> and Guided Learning
+                        </p>
+                        <p className="text-base text-text mt-4">
+                            Combine the convenience of online learning with the personalized support of expert mentors and nearby classes. Learn at your own pace while staying connected to a
+                            supportive community.
+                        </p>
+                    </div>
+                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-3 mt-16 gap-5">
+                    <div className="bg-light-primary flex gap-5 items-center p-5 rounded-full">
+                        <div className="p-5 bg-primary flex items-center justify-center rounded-full">
+                            <div className="solar-notebook h-[56px] w-[56px] text-white"></div>
+                        </div>
+                        <p className="text-text text-3lg lg:text-xl font-semibold leading-tight">Boootcamp Based Course</p>
+                    </div>
+                    <div className="bg-primary flex gap-5 items-center p-5 rounded-full">
+                        <div className="p-5 bg-light-primary flex items-center justify-center rounded-full">
+                            <div className="solar-academic h-[56px] w-[56px] text-primary"></div>
+                        </div>
+                        <p className="text-white text-3lg lg:text-xl font-semibold leading-tight">Chat With Your Mentor</p>
+                    </div>
+                    <div className="bg-secondary flex gap-5 items-center p-5 rounded-full">
+                        <div className="p-5 bg-light-secondary flex items-center justify-center rounded-full">
+                            <div className="solar-star h-[56px] w-[56px] text-secondary"></div>
+                        </div>
+                        <p className="text-text text-3lg lg:text-xl font-semibold leading-tight">Certified Expert & Mentor</p>
+                    </div>
+                </div>
+            </section>
+            <section className="container mx-auto py-[100px]">
+                <Swiper
+                    // install Swiper modules
+                    modules={[Scrollbar]}
+                    spaceBetween={50}
+                    slidesPerView={2}
+                    navigation
+                    scrollbar={{ draggable: true }}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log("slide change")}
+                >
+                    <SwiperSlide>Slide 1</SwiperSlide>
+                    <SwiperSlide>Slide 2</SwiperSlide>
+                    <SwiperSlide>Slide 3</SwiperSlide>
+                    <SwiperSlide>Slide 4</SwiperSlide>
+                    ...
+                </Swiper>
             </section>
         </>
     );
