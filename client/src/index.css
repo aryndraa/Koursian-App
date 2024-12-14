@@ -23,16 +23,41 @@
         @apply text-[#704FE6];
     }
 
-    .search-bar {
-        @apply bg-[#F4F4F4] text-black  h-10 rounded-full px-4 py-2 lg:w-80;
-    }
+  .search-bar {
+    @apply bg-[#F4F4F4] text-black  h-10 rounded-full px-4 py-2 lg:w-80
+  }
+  
+  
+  .landing-section-title {
+    @apply text-4xl text-text font-bold leading-tight;
+  }
+  .landing-bootcamp-card {
+    @apply flex flex-col justify-center items-center gap-y-8 bg-transparent hover:bg-primary text-text hover:text-white w-full;
+  }
+  
+  .Header1{
+    @apply font-Open-sauce font-bold text-4xl
+  }
+  .Header2{
+    @apply font-Open-sauce font-bold text-2xl
+  }
+  .Desc{
+    @apply font-Open-sauce font-normal text-xs
+  }
 
-    .landing-section-title {
-        @apply text-4xl text-text font-bold leading-tight;
-    }
-    .landing-bootcamp-card {
-        @apply flex flex-col justify-center items-center gap-y-8 bg-transparent hover:bg-primary text-text hover:text-white w-full;
-    }
+  .Input{
+    @apply w-full font-Open-sauce bg-slate-100 outline-none p-3 rounded-full outline-1 text-black focus:bg-white focus:outline-violet-400
+  }
+
+ .Button {
+  @apply w-full bg-primary p-3 rounded-full text-white font-Open-sauce font-semibold;
+  @apply transition-all duration-300 ease-in-out; /* Menambahkan transisi */
+}
+
+.Button:hover {
+  @apply bg-secondary transform scale-105 shadow-lg; /* Efek saat hover */
+}
+
 
     .landing-section-title {
         @apply text-4xl text-text font-bold leading-tight;
