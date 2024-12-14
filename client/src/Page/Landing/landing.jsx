@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import Logo from "../../assets/image/Logo.png";
+
 import Mentor1 from "../../assets/image/Mentor image-1.png";
 import Mentor2 from "../../assets/image/Mentor image-2.png";
 import Mentor3 from "../../assets/image/Mentor image-3.png";

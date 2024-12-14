@@ -19,6 +19,23 @@
         @apply flex items-center gap-1 py-4 pl-5 text-base pr-24 font-Open-sauce font-semibold rounded-full text-[#7C7C80] opacity-80 hover:text-[#704FE6] hover:opacity-100 hover:bg-[#DEC8FE] transition duration-100 ease-in-out focus:outline-none focus:ring-0 active:ring-0;
     }
 
+  .btn-nav {
+    @apply text-[#704FE6]
+  }
+
+  .search-bar {
+    @apply bg-[#F4F4F4] text-black  h-10 rounded-full px-4 py-2 lg:w-80
+  }
+  
+  
+  .landing-section-title {
+    @apply text-4xl text-text font-bold leading-tight;
+  }
+  .landing-bootcamp-card {
+    @apply flex flex-col justify-center items-center gap-y-8 bg-transparent hover:bg-primary text-text hover:text-white w-full;
+  }
+
+
     .landing-section-title {
         @apply text-4xl text-text font-bold leading-tight;
     }
