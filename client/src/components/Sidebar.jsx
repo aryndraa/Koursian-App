@@ -18,10 +18,10 @@ const SideBar = () => {
       <div className="drawer-side">
         <label htmlFor="sidebar-toggle" className="drawer-overlay"></label>
         <ul className="menu p-4 bg-base-100 text-base-content relative">
-          <div className="flex items-center justify-between pt-3 pb-7">
-            <div className="flex items-center">
-              <img src={Logo} alt="Logo Koursian" />
-              <p className="font-Open-sauce font-medium text-3lg text-black pl-4">
+          <div className="flex items-center justify-between x pb-7">
+            <div className="flex items-center pl-5">
+              <img src={Logo} alt="Logo Koursian" className="w-9"/>
+              <p className="font-Open-sauce font-bold text-3lg text-black pl-4">
                 Koursian
               </p>
             </div>

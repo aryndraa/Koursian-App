@@ -4,7 +4,7 @@ const NavLog = () => {
   return (
     <div className="navbar bg-base-100 justify-between">
       <div className="">
-        <p className="font-Open-sauce font-semibold text-3lg text-black pl-4">
+        <p className="font-Open-sauce font-semibold text-3lg text-black pl-4 hidden md:block">
           Dashboard
         </p>
       </div>
