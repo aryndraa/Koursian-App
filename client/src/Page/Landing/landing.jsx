@@ -6,9 +6,16 @@ import Mentor5 from "../../assets/image/landing/Mentor image.png";
 import Deco from "../../assets/image/deco.svg";
 import DecoPrimary from "../../assets/image/decoprim.svg";
 import Navbar from "../../components/landing/navbar.jsx";
+import Footer from "../../components/landing/footer.jsx";
 import FeatureImage from "../../assets/image/Landing/FeatureImg.png";
 import { Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import userTestimonials1 from "../../assets/image/Landing/testimonials/user1.png";
+import userTestimonials2 from "../../assets/image/Landing/testimonials/user2.png";
+import userTestimonials3 from "../../assets/image/Landing/testimonials/user3.png";
+import userTestimonials4 from "../../assets/image/Landing/testimonials/user4.png";
+import userTestimonials5 from "../../assets/image/Landing/testimonials/user5.png";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -195,7 +202,7 @@ const Landing = () => {
             </section>
             <section className="py-[100px] container mx-auto">
                 <div className="flex flex-col xl:flex-row xl:items-center gap-y-8">
-                    <img src={FeatureImage} alt="" className="h-fit w-fit" />
+                    <img src={FeatureImage} alt="" className="h-fit w-fit hidden lg:block" />
                     <div className="flex-1">
                         <img src={DecoPrimary} alt="" className="hidden xl:block" />
                         <p className="landing-section-title max-w-[802px]">
@@ -207,31 +214,31 @@ const Landing = () => {
                         </p>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 mt-16 gap-5">
+                <div className="grid grid-cols-1 xl:grid-cols-3 mt-16 gap-5">
                     <div className="bg-light-primary flex gap-5 items-center p-5 rounded-full">
                         <div className="p-5 bg-primary flex items-center justify-center rounded-full">
-                            <div className="solar-notebook h-[56px] w-[56px] text-white"></div>
+                            <div className="solar-notebook feature-icon-sizing text-white"></div>
                         </div>
-                        <p className="text-text text-3lg lg:text-xl font-semibold leading-tight">Boootcamp Based Course</p>
+                        <p className="text-text text-3lg xl:text-xl font-semibold leading-tight">Boootcamp Based Course</p>
                     </div>
                     <div className="bg-primary flex gap-5 items-center p-5 rounded-full">
                         <div className="p-5 bg-light-primary flex items-center justify-center rounded-full">
-                            <div className="solar-academic h-[56px] w-[56px] text-primary"></div>
+                            <div className="solar-academic feature-icon-sizing text-primary"></div>
                         </div>
-                        <p className="text-white text-3lg lg:text-xl font-semibold leading-tight">Chat With Your Mentor</p>
+                        <p className="text-white text-3lg xl:text-xl font-semibold leading-tight">Chat With Your Mentor</p>
                     </div>
                     <div className="bg-secondary flex gap-5 items-center p-5 rounded-full">
                         <div className="p-5 bg-light-secondary flex items-center justify-center rounded-full">
-                            <div className="solar-star h-[56px] w-[56px] text-secondary"></div>
+                            <div className="solar-star feature-icon-sizing text-secondary"></div>
                         </div>
-                        <p className="text-text text-3lg lg:text-xl font-semibold leading-tight">Certified Expert & Mentor</p>
+                        <p className="text-text text-3lg xl:text-xl font-semibold leading-tight">Certified Expert & Mentor</p>
                     </div>
                 </div>
             </section>
             <section className=" py-[100px] my-[100px] bg-primary">
                 <div className="container mx-auto">
                     <div className="flex justify-center items-center flex-col">
-                        <img src={Deco} alt="" />
+                        <img src={Deco} alt="" className="hidden lg:block"/>
                         <div className="text-white font-semibold">
                             <p className="landing-section-title text-white max-w-[802px] text-center mt-4">
                                 Hear from Our <span className="text-secondary">Learners</span>, <span className="text-secondary">Stories</span> of Growth and Success
@@ -242,20 +249,80 @@ const Landing = () => {
                         className="mt-16"
                         // install Swiper modules
                         modules={[Scrollbar]}
-                        spaceBetween={50}
-                        slidesPerView={2}
+                        spaceBetween={0}
+                        // slidesPerView={4}
                         navigation
                         scrollbar={{ draggable: true }}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 1,
+                            },
+                            768: {
+                                slidesPerView: 1,
+                            },
+                            1024: {
+                                slidesPerView: 2,
+                            },
+                            1280: {
+                                slidesPerView: 4,
+                            },
+                        }}
                         onSwiper={(swiper) => console.log(swiper)}
                         onSlideChange={() => console.log("slide change")}
                     >
-                        <SwiperSlide className="">Slide 1</SwiperSlide>
-                        <SwiperSlide>Slide 2</SwiperSlide>
-                        <SwiperSlide>Slide 3</SwiperSlide>
-                        <SwiperSlide>Slide 4</SwiperSlide>
+                        <div className="pb-12"></div>
+                        <SwiperSlide className="swiper-testimonials">
+                            <img src={userTestimonials1} alt="" />
+                            <div className="mt-12 space-y-4 text-center">
+                                <p className="text-white text-3lg font-semibold">Johan Liebert</p>
+                                <p className="text-base text-white">
+                                    Enrolling in this program was the best decision I’ve made for my career. The mentors were incredibly supportive, and the flexibility allowed me to balance work and
+                                    learning seamlessly!
+                                </p>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-testimonials">
+                            <img src={userTestimonials2} alt="" />
+                            <div className="mt-12 space-y-4 text-center">
+                                <p className="text-white text-3lg font-semibold">Andra Divano</p>
+                                <p className="text-base text-white">
+                                    The combination of online courses and nearby classes made it so easy to stay motivated. I gained practical skills and landed a job within months of completing the
+                                    course.
+                                </p>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-testimonials">
+                            <img src={userTestimonials3} alt="" />
+                            <div className="mt-12 space-y-4 text-center">
+                                <p className="text-white text-3lg font-semibold">Arya Chandra</p>
+                                <p className="text-base text-white">
+                                    I was amazed by the personalized guidance from mentors. They didn’t just teach—they genuinely cared about my success and helped me achieve my goals.
+                                </p>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-testimonials">
+                            <img src={userTestimonials4} alt="" />
+                            <div className="mt-12 space-y-4 text-center">
+                                <p className="text-white text-3lg font-semibold">Shisi Maru</p>
+                                <p className="text-base text-white">
+                                    This program gave me everything I needed to succeed, from structured lessons to real-world projects. The local classes were a huge bonus for hands-on learning!
+                                </p>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-testimonials">
+                            <img src={userTestimonials5} alt="" />
+                            <div className="mt-12 space-y-4 text-center">
+                                <p className="text-white text-3lg font-semibold">Dyven Murau</p>
+                                <p className="text-base text-white">
+                                    Enrolling in this program was the best decision I’ve made for my career. The mentors were incredibly supportive, and the flexibility allowed me to balance work and
+                                    learning seamlessly!
+                                </p>
+                            </div>
+                        </SwiperSlide>
                     </Swiper>
                 </div>
             </section>
+            <Footer />
         </>
     );
 };
