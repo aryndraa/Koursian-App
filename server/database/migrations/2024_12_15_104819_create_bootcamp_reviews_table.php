@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('question_answers', function (Blueprint $table) {
+        Schema::create('bootcamp_reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('question_id')->constrained('questions');
-            $table->unsignedBigInteger('user_id');
-            $table->string('user_type');
-            $table->text('answer');
+            $table->foreignId('bootcamp_id')->constrained('bootcamps');
+            $table->foreignId('user_id')->constrained('users');
+            $table->integer('rating');
+            $table->string('comment');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('question_answers');
+        Schema::dropIfExists('bootcamp_reviews');
     }
 };

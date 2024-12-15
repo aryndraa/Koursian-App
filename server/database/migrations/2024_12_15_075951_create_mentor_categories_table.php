@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bootcamps', function (Blueprint $table) {
+        Schema::create('mentor_categories', function (Blueprint $table) {
             $table->id();
             $table->foreignId('mentor_id')->constrained('mentors')->onDelete('cascade');
-            $table->string('title');
-            $table->text('description');
-            $table->unsignedBigInteger('stars')->default(0);
-            $table->json('benefits')->nullable();
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bootcamps');
+        Schema::dropIfExists('mentor_categories');
     }
 };

@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('personal_chats', function (Blueprint $table) {
+        Schema::create('bootcamp_materials', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('receiver_id');
-            $table->string('receiver_type');
-            $table->unsignedBigInteger('sender_id');
-            $table->string('sender_type');
-            $table->text('message');
+            $table->foreignId('bootcamp_id')->constrained('bootcamps');
+            $table->string('title');
+            $table->text('description');
+            $table->integer('total_durations')->default(0);
+            $table->integer('total_contents')->default(0);
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('personal_chats');
+        Schema::dropIfExists('bootcamp_materials');
     }
 };

@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('files', function (Blueprint $table) {
+        Schema::create('bootcamp_group_chats', function (Blueprint $table) {
             $table->id();
-            $table->string('file_name');
-            $table->unsignedBigInteger('file_size');
-            $table->string('file_type');
-            $table->string('file_path');
-            $table->unsignedBigInteger('related_id');
-            $table->string('related_type');
+            $table->foreignId('bootcamp_id')->constrained('bootcamps');
+            $table->string('user_type');
+            $table->string('user_id');
+            $table->string('message');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('files');
+        Schema::dropIfExists('bootcamp_group_chats');
     }
 };
