@@ -5,7 +5,7 @@ const navbar = () => {
         <>
             <nav className="container py-5 mx-auto navbar bg-base-100">
                 <div className="navbar-start">
-                    <div className="flex items-center ">
+                    <div className="flex items-center space-x-4 ">
                         <img src={Logo} alt="" />
                         <p className="font-semibold text-3lg text-text">Koursian</p>
                     </div>

@@ -3,8 +3,8 @@ import Mentor2 from "../../assets/image/landing/Mentor image-2.png";
 import Mentor3 from "../../assets/image/landing/Mentor image-3.png";
 import Mentor4 from "../../assets/image/landing/Mentor image-4.png";
 import Mentor5 from "../../assets/image/landing/Mentor image.png";
-import Deco from "../../assets/image/landing/deco.svg";
-import DecoPrimary from "../../assets/image/landing/decoprim.svg";
+import Deco from "../../assets/image/deco.svg";
+import DecoPrimary from "../../assets/image/decoprim.svg";
 import Navbar from "../../components/landing/navbar.jsx";
 import FeatureImage from "../../assets/image/Landing/FeatureImg.png";
 import { Scrollbar } from "swiper/modules";
@@ -228,23 +228,33 @@ const Landing = () => {
                     </div>
                 </div>
             </section>
-            <section className="container mx-auto py-[100px]">
-                <Swiper
-                    // install Swiper modules
-                    modules={[Scrollbar]}
-                    spaceBetween={50}
-                    slidesPerView={2}
-                    navigation
-                    scrollbar={{ draggable: true }}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log("slide change")}
-                >
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
-                    ...
-                </Swiper>
+            <section className=" py-[100px] my-[100px] bg-primary">
+                <div className="container mx-auto">
+                    <div className="flex justify-center items-center flex-col">
+                        <img src={Deco} alt="" />
+                        <div className="text-white font-semibold">
+                            <p className="landing-section-title text-white max-w-[802px] text-center mt-4">
+                                Hear from Our <span className="text-secondary">Learners</span>, <span className="text-secondary">Stories</span> of Growth and Success
+                            </p>
+                        </div>
+                    </div>
+                    <Swiper
+                        className="mt-16"
+                        // install Swiper modules
+                        modules={[Scrollbar]}
+                        spaceBetween={50}
+                        slidesPerView={2}
+                        navigation
+                        scrollbar={{ draggable: true }}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log("slide change")}
+                    >
+                        <SwiperSlide className="">Slide 1</SwiperSlide>
+                        <SwiperSlide>Slide 2</SwiperSlide>
+                        <SwiperSlide>Slide 3</SwiperSlide>
+                        <SwiperSlide>Slide 4</SwiperSlide>
+                    </Swiper>
+                </div>
             </section>
         </>
     );
