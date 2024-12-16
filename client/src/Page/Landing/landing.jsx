@@ -202,7 +202,7 @@ const Landing = () => {
             </section>
             <section className="py-[100px] container mx-auto">
                 <div className="flex flex-col xl:flex-row xl:items-center gap-y-8">
-                    <img src={FeatureImage} alt="" className="h-fit w-fit hidden lg:block" />
+                    <img src={FeatureImage} alt="" className="flex-shrink hidden lg:block" />
                     <div className="flex-1">
                         <img src={DecoPrimary} alt="" className="hidden xl:block" />
                         <p className="landing-section-title max-w-[802px]">
