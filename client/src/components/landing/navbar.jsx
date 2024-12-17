@@ -5,7 +5,7 @@ const navbar = () => {
         <>
             <nav className="container py-5 mx-auto navbar bg-base-100">
                 <div className="navbar-start">
-                    <div className="flex items-center ">
+                    <div className="flex items-center space-x-4 ">
                         <img src={Logo} alt="" />
                         <p className="font-semibold text-3lg text-text">Koursian</p>
                     </div>
@@ -36,7 +36,7 @@ const navbar = () => {
                         </a>
                     </div>
                     <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="text-white border-none outline-none btn bg-primary lg:hidden">
+                        <div tabIndex={0} role="button" className="text-white border-none outline-none btn bg-primary xl:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                             </svg>

@@ -2,6 +2,11 @@
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
+        container: {
+            padding: {
+                DEFAULT: "1rem",
+            }
+        },
         extend: {
             fontFamily: {
                 "Open-sauce": ["Open-sauce", "sans-serif"],
