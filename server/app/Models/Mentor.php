@@ -35,4 +35,9 @@ class Mentor extends Model
     {
         return $this->morphOne(bootcampGroupChat::class, 'user');
     }
+
+    public function userChats()
+    {
+        return $this->hasmany(User::class);
+    }
 }

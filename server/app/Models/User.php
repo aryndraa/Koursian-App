@@ -58,6 +58,11 @@ class User extends Authenticatable
         return $this->hasMany(BootcampPurchase::class);
     }
 
+    public function mentorChats()
+    {
+        return $this->hasMany(MentorChat::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -81,3 +86,4 @@ class User extends Authenticatable
         ];
     }
 }
+

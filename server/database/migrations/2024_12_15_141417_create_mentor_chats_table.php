@@ -11,16 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bootcamp_purchases', function (Blueprint $table) {
+        Schema::create('mentor_chats', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('bootcamp_id')->constrained('bootcamps');
+            $table->foreignId('mentor_id')->constrained('mentors');
             $table->foreignId('user_id')->constrained('users');
-            $table->string('purchase_method');
-            $table->float('price');
-            $table->float('discount')->default(0);
-            $table->float('paid');
-            $table->float('total_payment');
-            $table->string('status')->default('pending');
+            $table->string('message');
             $table->timestamps();
         });
     }
@@ -30,7 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bootcamp_purchases');
+        Schema::dropIfExists('mentor_chats');
     }
 };
-

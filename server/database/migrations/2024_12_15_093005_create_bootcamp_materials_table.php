@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('bootcamp_materials', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('bootcamp_id')->constrained('bootcamps');
+            $table->foreignId('bootcamp_id')->constrained('bootcamps')->onDelete('cascade');
             $table->string('title');
             $table->text('description');
             $table->integer('total_durations')->default(0);
