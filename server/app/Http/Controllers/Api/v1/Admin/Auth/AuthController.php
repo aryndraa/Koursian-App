@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Api\Admin\Auth;
+namespace App\Http\Controllers\Api\v1\Admin\Auth;
 
 use App\Http\Controllers\Api\BaseController;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Admin\Auth\LoginRequest;
 use App\Http\Requests\Api\Admin\Auth\RegisterRequest;
 use App\Models\Admin;
-use Illuminate\Http\Request;
 
 class AuthController extends BaseController
 {
