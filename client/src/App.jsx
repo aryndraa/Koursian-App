@@ -7,6 +7,7 @@ import Browse from "./Page/Browse/Browse";
 import Bootcamp from "./Page/Mybootcamp/Bootcamp";
 import Mentor from "./Page/Mentor/Mentor";
 import Question from "./Page/Question/Question";
+import Profile from "./Page/userProfile/Profile";
 
 import SideBar from "./components/Sidebar";
 import NavLog from "./components/NavLog";
@@ -20,6 +21,7 @@ function App() {
       <Route path="/" element={<Landing />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Register" element={<Register />} />
+      <Route path="/Profile" element={<Profile />} />
       {/* #2  */}
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/Browse" element={<Browse />} />

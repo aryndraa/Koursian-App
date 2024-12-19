@@ -1,6 +1,8 @@
 import Profile from "../assets/image/profile.png";
+import { useNavigate } from "react-router-dom";
 
 const NavLog = () => {
+  const navigate = useNavigate()
   return (
     <div className="navbar bg-base-100 justify-between">
       <div className="">
@@ -11,11 +13,10 @@ const NavLog = () => {
 
       <div className="">
         <input
-        placeholder="search bootcamp, mentor, question"
-        className="search-bar
-        ">
-        
-        </input>
+          placeholder="search bootcamp, mentor, question"
+          className="search-bar
+        "
+        ></input>
       </div>
 
       {/* Bagian Kanan - Menu */}
@@ -52,6 +53,9 @@ const NavLog = () => {
             <li>
               <a>Cart</a>
             </li>
+            <li>
+              <a>User profile </a>
+            </li>
           </ul>
         </div>
 
@@ -67,8 +71,13 @@ const NavLog = () => {
             <span className="solar--cart-large-2-bold-duotone"></span>
           </button>
           <div className="avatar">
-            <div className="w-8 rounded-full">
-              <img src={Profile} alt="User Avatar" />
+            <div className="w-8 rounded-full ">
+              <img
+              typeof="button"
+                src={Profile}
+                alt="User Avatar"
+                onClick={() => navigate("/Profile")}
+              />
             </div>
           </div>
         </div>

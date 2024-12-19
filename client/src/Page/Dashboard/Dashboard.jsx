@@ -4,7 +4,7 @@ const Dashboard = () => {
 
     return(
         <Layout1>
-            <p>hello sabar on progres</p>
+            <p>hello, sabar on progres</p>
         </Layout1>
     )
 }
