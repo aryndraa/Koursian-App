@@ -1,10 +1,11 @@
+import Layout3 from "../layout/Layout3";
 
 const Profile = () => {
 
     return(
-        <>
-        <p>Hellow brow</p>
-        </>
+        <Layout3>
+            
+        </Layout3>
     )
 };
 
