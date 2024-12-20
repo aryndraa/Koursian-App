@@ -40,6 +40,18 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'user' => [
+            'driver' => 'jwt',
+            'provider' => 'users',
+        ],
+        'mentor' => [
+            'driver' => 'jwt',
+            'provider' => 'mentors',
+        ],
+        'admin' => [
+            'driver' => 'jwt',
+            'provider' => 'admins',
+        ]
     ],
 
     /*
@@ -64,11 +76,16 @@ return [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
+        'mentors' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Mentor::class),
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Admin::class),
+        ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+
     ],
 
     /*
