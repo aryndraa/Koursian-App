@@ -9,10 +9,6 @@ import Mentor from "./Page/Mentor/Mentor";
 import Question from "./Page/Question/Question";
 import Profile from "./Page/userProfile/Profile";
 
-import SideBar from "./components/Sidebar";
-import NavLog from "./components/NavLog";
-import Layout1 from "./Page/layout/Layout1";
-import Layout2 from "./Page/layout/Layout2";
 
 function App() {
   return (
@@ -28,11 +24,6 @@ function App() {
       <Route path="/Bootcamp" element={<Bootcamp />} />
       <Route path="/Mentor" element={<Mentor />} />
       <Route path="/Question" element={<Question />} />
-      {/* tes */}
-      <Route path="/sideBar" element={<SideBar />} />
-      <Route path="/Layout1" element={<Layout1 />} />
-      <Route path="/Layout2" element={<Layout2 />} />
-      <Route path="/navloged" element={<NavLog />} />
     </Routes>
   );
 }

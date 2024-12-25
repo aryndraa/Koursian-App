@@ -1,13 +1,11 @@
 import { useLocation } from "react-router-dom";
-import Logo from "../assets/image/Logo.png";
 
-const SideBar = () => {
+const SideProfile = () => {
   const location = useLocation();
-  const { pathname } = location; 
+  const { pathname } = location;
   const isActive = (path) => pathname === path;
 
   return (
-    
     <div className=" lg:drawer-open h-min">
       <input id="sidebar-toggle" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col w-min h-full">
@@ -25,12 +23,6 @@ const SideBar = () => {
         <ul className="menu p-4 bg-base-100 text-base-content relative h-full gap-2">
           {/* Header Sidebar */}
           <div className="flex items-center justify-between pb-7">
-            <div className="flex items-center pl-5">
-              <img src={Logo} alt="Logo Koursian" className="w-9" />
-              <p className="font-Open-sauce font-bold text-3lg text-black pl-4">
-                Koursian
-              </p>
-            </div>
             <label
               htmlFor="sidebar-toggle"
               className="btn btn-sm btn-circle btn-ghost lg:hidden"
@@ -47,8 +39,7 @@ const SideBar = () => {
                 isActive("/Dashboard") ? "bg-[#DEC8FE] text-primary" : ""
               }`}
             >
-              <span className="solar--home-angle-bold-duotone"></span>
-              Dashboard
+              Profile
             </a>
           </li>
           <li>
@@ -58,8 +49,7 @@ const SideBar = () => {
                 isActive("/Browse") ? "bg-[#DEC8FE] text-primary" : ""
               }`}
             >
-              <span className="solar--compass-bold-duotone"></span>
-              Browse
+              Wishlist
             </a>
           </li>
           <li>
@@ -69,30 +59,18 @@ const SideBar = () => {
                 isActive("/Bootcamp") ? "bg-[#DEC8FE] text-primary" : ""
               }`}
             >
-              <span className="solar--notebook-minimalistic-bold-duotone"></span>
-              My Bootcamp
+              My Question
             </a>
           </li>
           <li>
             <a
               href="/Mentor"
-              className={`button-side ${
+              className={`button-side outline-1 outline-black ${
                 isActive("/Mentor") ? "bg-[#DEC8FE] text-primary" : ""
               }`}
             >
-              <span className="solar--user-speak-bold-duotone"></span>
-              Mentor
-            </a>
-          </li>
-          <li>
-            <a
-              href="/Question"
-              className={`button-side ${
-                isActive("/Question") ? "bg-[#DEC8FE] text-primary" : ""
-              }`}
-            >
-              <span className="solar--question-circle-bold-duotone"></span>
-              Question
+              
+              My Bootcamp
             </a>
           </li>
         </ul>
@@ -101,4 +79,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default SideProfile;

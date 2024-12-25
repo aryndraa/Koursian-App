@@ -1,10 +1,14 @@
-import NavLog from "../../components/NavLog"
+import NavProfile from "../../components/Profile/NavProfile.jsx"
+import SideProfile from "../../components/Profile/SideProfile.jsx"
 
 const Layout3 = (children) => {
 return(
     <div>
         <div>
-            <NavLog />
+            <NavProfile />
+        </div>
+        <div>
+            <SideProfile />
         </div>
     </div>
 )

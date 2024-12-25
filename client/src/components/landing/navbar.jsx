@@ -1,6 +1,8 @@
 import Logo from "../../assets/image/Logo.png";
 
+
 const navbar = () => {
+
     return (
         <>
             <nav className="container py-5 mx-auto navbar bg-base-100">
@@ -28,10 +30,10 @@ const navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <div className="items-center hidden gap-4 xl:flex">
-                        <a href="" className="font-semibold text-text">
+                        <a href="/register  " className="font-semibold text-text">
                             Sign Up
                         </a>
-                        <a href="" className="flex items-center justify-center px-12 py-3 font-semibold duration-200 border-2 text-text border-primary rounded-3xl hover:bg-primary hover:text-white">
+                        <a href="/login" className="flex items-center justify-center px-12 py-3 font-semibold duration-200 border-2 text-text border-primary rounded-3xl hover:bg-primary hover:text-white">
                             Sign In
                         </a>
                     </div>

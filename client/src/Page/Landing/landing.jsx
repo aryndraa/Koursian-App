@@ -21,6 +21,7 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 
 const Landing = () => {
+
     return (
         <>
             <Navbar />

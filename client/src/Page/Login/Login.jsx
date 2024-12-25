@@ -1,18 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import Layout2 from "../layout/Layout2";
 import {useForm} from "react-hook-form"
+import axios from "axios"
+import { useEffect } from "react";
 
 const Login = () => {
 const navigate = useNavigate()
 
-  const dummyUser = {
-    username: "1",
-    password: "1",
-  };
+  
 const { register, handleSubmit } = useForm();
 
-const onsubmit = (data) => {
+const onsubmit = (e) => {
 const {username, password} = data 
+preventDefault();
 
   if (username === dummyUser.username && password === dummyUser.password) {
     navigate("/dashboard")
